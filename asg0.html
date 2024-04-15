@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vector Drawing</title>
+    <style>
+        #input-controls, #operation-controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="example" width="400" height="400"></canvas>
+    <div id="input-controls">
+        <div>
+            <label>v1: x</label><input id="x-coord1" type="number" placeholder="x for v1">
+            <label>y</label><input id="y-coord1" type="number" placeholder="y for v1">
+        </div>
+        <div>
+            <label>v2: x</label><input id="x-coord2" type="number" placeholder="x for v2">
+            <label>y</label><input id="y-coord2" type="number" placeholder="y for v2">
+        </div>
+        <button onclick="handleDrawEvent()">Draw Vectors</button>
+    </div>
+    <div id="operation-controls">
+        <select id="operation">
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mul">Multiply</option>
+            <option value="div">Divide</option>
+            <option value="mag">Magnitude</option>
+            <option value="norm">Normalize</option>
+            <option value="angle">Angle between</option>
+            <option value="area">Area</option>
+        </select>
+        <input id="scalar" type="number" placeholder="Enter scalar value">
+        <button onclick="handleDrawOperationEvent()">Perform Operation</button>
+    </div>
+
+    <script src="lib\cuon-matrix-cse160.js"></script>
+    <script src="asg0.js"></script>
+</body>
+</html>
